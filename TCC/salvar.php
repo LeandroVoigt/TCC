@@ -1,9 +1,9 @@
-<?php
+<?php  
 // Conexão com o banco de dados
 $servername = "localhost";
 $username = "root";
-$password = "OLESCSUB16"; // se você definiu uma senha, coloque aqui
-$dbname = "sporthub"; // substitua pelo nome do seu banco
+$password = "OLESCSUB16"; // sua senha do MySQL
+$dbname = "sporthub";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 
@@ -19,22 +19,27 @@ $nascimento = $_POST['birthdate'];
 $email = $_POST['email'];
 $senha = $_POST['password'];
 $confirmarSenha = $_POST['confirm_password'];
-$tipo = $_POST['gender'];
+$tipo = $_POST['gender']; // 'atleta' ou 'clube'
 
-// Validação básica (opcional)
+// Validação de senha
 if ($senha !== $confirmarSenha) {
-    die("Senhas não coincidem.");
+    echo "<script>alert('Senhas não coincidem!'); window.history.back();</script>";
+    exit();
 }
 
-// Insere no banco
+// Insere os dados no banco
 $sql = "INSERT INTO usuarios (nome, cpf_cnpj, nascimento, email, senha, tipo)
         VALUES ('$nome', '$cpf', '$nascimento', '$email', '$senha', '$tipo')";
 
 if ($conn->query($sql) === TRUE) {
-    echo "Conta criada com sucesso!";
-    // header('Location: ClubesPeneiras.html'); // opcional: redirecionar após salvar
+    // Redireciona para a mesma página para todos os tipos
+    echo "<script>
+            alert('Cadastro realizado com sucesso!');
+            window.location.href = 'sportHub.html';
+          </script>";
+    exit();
 } else {
-    echo "Erro: " . $conn->error;
+    echo "<script>alert('Erro ao cadastrar: " . $conn->error . "'); window.history.back();</script>";
 }
 
 $conn->close();
