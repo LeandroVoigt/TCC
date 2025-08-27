@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Upload de Imagem com Preview</title>
+  <style>
+    #preview {
+      width: 250px;
+      height: 250px;
+      border: 2px dashed #aaa;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 10px;
+      overflow: hidden;
+    }
+    #preview img {
+      width: 100%;
+      height: auto;
+    }
+  </style>
+</head>
+<body>
+  <h2>Upload de Imagem</h2>
+
+  <form action="upload.php" method="POST" enctype="multipart/form-data">
+    <div id="preview">Pré-visualização</div>
+    <input type="file" name="imagem" id="imagem" accept="image/*" required>
+    <br><br>
+    <button type="submit">Enviar</button>
+  </form>
+
+  <script>
+    const input = document.getElementById('imagem');
+    const preview = document.getElementById('preview');
+
+    input.addEventListener('change', function () {
+      const file = this.files[0];
+      if (file) {
+        const reader = new FileReader();
+
+        reader.onload = function (e) {
+          preview.innerHTML = `<img src="${e.target.result}" alt="preview">`;
+        };
+
+        reader.readAsDataURL(file);
+      } else {
+        preview.innerHTML = "Pré-visualização";
+      }
+    });
+  </script>
+</body>
+</html>

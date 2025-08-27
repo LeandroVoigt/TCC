@@ -5,136 +5,62 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Clubes e Peneiras</title>
   <link rel="stylesheet" href="ClubesPeneiras.css" />
-  <link rel="stylesheet" href="ClubesPeneiras.js">
-  <link rel="stylesheet" href="salvar.php">
-
+</head>
+<body>
   <div class="container">
-    <header class="header">
-      <div class="title">Sport HUB</div>
-      <div class="buttons">
-        <input type="text" id="searchInput" placeholder="Buscar clube..." class="search-input">
-        <!--<button id="searchBtn" class="search-btn">🔍 Procurar</button>-->
-        <button id="notificacoes-btn">🔔 Notificações</button>
-        <a href="Perfil.html" class="profile-btn">👤 Perfil</a>
-      </div>
-
-      <div id="notificacoes-box" class="hidden">
-        <ul>
-          <li> Peneira do Santa Catarina é amanhã! </li>
-          <li> A.D.C Taquaras enviou um E-mail a você! </li>
-          <li> Marcílio Dias cadastrou nova Peneira! </li>
-        </ul>
+    <header>
+      <div class="logo">Sport HUB</div>
+      <div class="top-buttons">
+        <button class="blue-btn">🔍 Procurar</button>
+        <button class="blue-btn">🔔 notificações</button>
+        <button class="blue-btn">👤 perfil</button>
       </div>
     </header>
 
-</head>
-<body>
- <!--  <div class="container">
-    <header class="header">
-      <div class="title">Sport HUB</div>
-      <div class="buttons">
-        <input type="text" id="searchInput" placeholder="Buscar clube..." class="search-input">
-        <button id="searchBtn" class="search-btn">🔍 Procurar</button>-->
-        <!--  <button id="notificacoes-btn">🔔 Notificações</button>
-        <a href="Perfil.html" class="profile-btn">👤 Perfil</a>
-      </div>
-
-      <div id="notificacoes-box" class="hidden">
-        <ul>
-          <li> Peneira do Santa Catarina é amanhã! </li>
-          <li> A.D.C Taquaras enviou um E-mail a você! </li>
-          <li> Marcílio Dias cadastrou nova Peneira! </li>
-        </ul>
-      </div>
-    </header>  -->
-
-    <div class="message">
-      Monte seu perfil para participar ou cadastrar Peneiras!
+    <div class="banner">
+      Cadastre-se e monte seu perfil para participar das Peneiras!
     </div>
 
-    <div class="main">
+    <main class="content">
       <aside class="ligas">
         <h2>Ligas Profissionais</h2>
-        <ul>
-          <li><img src="CatarinenseA.jpeg" alt="Série A"> Campeonato Catarinense Série A</li>
-          <li><img src="CampeonatoCatarinenseB.png" alt="Série B"> Campeonato Catarinense Série B</li>
-          <li><img src="CatarinenseC.jpeg" alt="Série C"> Campeonato Catarinense Série C</li>
-          <li><img src="CopadoBrasil.jpeg" alt="Copa"> Copa do Brasil</li>
-          <li><img src="Campeonato_Brasileiro_Série_A.png" alt="Série A"> Campeonato Brasileiro Série A</li>
-          <li><img src="BrasileiraoB.png" alt="Série B"> Campeonato Brasileiro Série B</li>
-          <li><img src="BrasileiraoSerieC.png" alt="Série C"> Campeonato Brasileiro Série C</li>
-          <li><img src="BrasileirãoD.jpeg" alt="Série D"> Campeonato Brasileiro Série D</li>
-          <li><img src="JoguinhosAbertos18.jpg" alt="JoguinhosAbertos18"> Jogos Abertos SC</li>
-          <li><img src="copa_SC.jpg" alt="Copa SC"> Copa Santa Catarina</li>
-        </ul>
+        <div class="liga">Campeonato Catarinense Série A</div>
+        <div class="liga">Campeonato Catarinense Série B</div>
+        <div class="liga">Campeonato Catarinense Série C</div>
+        <div class="liga">Copa do Brasil</div>
+        <div class="liga">Campeonato Brasileiro Série D</div>
       </aside>
 
-      <section class="clubes" id="clubesList">
+      <section class="clubes">
         <div class="clube">
-          <img src="SantaCatarinaClube.png" alt="Santa Catarina">
-          <h3>Santa Catarina</h3>
-          <ul>
-            <li><img src="CatarinenseA.jpeg"> C.C.F Série A</li>
-            <li><img src="BrasileirãoD.jpeg"> C.B Série D</li>
-            <li><img src="LigaRioSulense20.jpeg"> LRF Sub-20</li>
-          </ul>
+          <div class="tags">
+            <div>C.C.F Série A</div>
+            <div>C.B Série D</div>
+            <div>LRF Sub-20</div>
+          </div>
         </div>
 
         <div class="clube">
-          <img src="Marcílio_Dias.png">
-          <h3>Marcílio Dias</h3>
-          <ul>
-            <li><img src="CatarinenseA.jpeg"> C.C.F Série A</li>
-            <li><img src="BrasileirãoD.jpeg"> C.B Série D</li>
-          </ul>
+          <div class="tags">
+            <div>C.C.F Série A</div>
+            <div>C.B Série D</div>
+          </div>
         </div>
 
         <div class="clube">
-          <img src="Taquaras.jpeg">
-          <h3>A.D.C Taquaras</h3>
-          <ul>
-            <li><img src="Vale Norte.jpeg"> L.V.N.D</li>
-          </ul>
+          <div class="tags">
+            <div>L.V.N.D</div>
+          </div>
         </div>
 
         <div class="clube">
-          <img src="União Taió.jpeg" alt="C.E.R União">
-          <h3>C.E.R União</h3>
-          <ul>
-            <li><img src="LigaRioSulense.jpeg"> L.R.F Ouro</li>
-            <li><img src="LigaRioSulense20.jpeg"> L.R.F Sub-20</li>
-          </ul>
+          <div class="tags">
+            <div>L.R.F Ouro</div>
+            <div>L.R.F Sub-20</div>
+          </div>
         </div>
       </section>
-    </div>
+    </main>
   </div>
-
-  <script>
-    const btn = document.getElementById("notificacoes-btn");
-    const box = document.getElementById("notificacoes-box");
-    const searchBtn = document.getElementById("searchBtn");
-    const searchInput = document.getElementById("searchInput");
-    const clubesList = document.getElementById("clubesList");
-
-    btn.addEventListener("click", () => {
-      box.classList.toggle("hidden");
-    });
-
-    document.addEventListener("click", (e) => {
-      if (!box.contains(e.target) && !btn.contains(e.target)) {
-        box.classList.add("hidden");
-      }
-    });
-
-    searchBtn.addEventListener("click", () => {
-      const filtro = searchInput.value.toLowerCase();
-      const clubes = clubesList.querySelectorAll(".clube");
-
-      clubes.forEach(clube => {
-        const nome = clube.querySelector("h3").textContent.toLowerCase();
-        clube.style.display = nome.includes(filtro) ? "block" : "none";
-      });
-    });
-  </script>
 </body>
 </html>
