@@ -12,10 +12,9 @@ include 'conexao.php'; // conecta ao banco
 
 $id_usuario = $_SESSION['id']; // id do clube logado
 
-// Corrigido: nome correto da coluna é "usuario_id"
-$sql = "SELECT * FROM perfil_clube WHERE usuario_id = ?";
+$sql = "SELECT * FROM clubes WHERE id = :id";
 $stmt = $conn->prepare($sql);
-$stmt->execute([$id_usuario]);
+$stmt->execute(['id' => $id_usuario]);
 
 if ($stmt->rowCount() > 0) {
     // Perfil já existe: redireciona para visualização
